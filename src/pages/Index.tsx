@@ -44,13 +44,17 @@ const Index = () => {
                 Безопасно удалим любое дерево. Работаем с 2015 года. Гарантия качества и полная уборка территории.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">
-                  <Icon name="FileText" size={20} className="mr-2" />
-                  Оставить заявку
+                <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
+                  <a href="#contacts">
+                    <Icon name="FileText" size={20} className="mr-2" />
+                    Оставить заявку
+                  </a>
                 </Button>
-                <Button size="lg" variant="outline">
-                  <Icon name="Calculator" size={20} className="mr-2" />
-                  Рассчитать стоимость
+                <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white" asChild>
+                  <a href="https://wa.me/79134163481" target="_blank" rel="noopener noreferrer">
+                    <Icon name="MessageCircle" size={20} className="mr-2" />
+                    WhatsApp
+                  </a>
                 </Button>
               </div>
               <div className="flex gap-8 pt-4">
@@ -239,11 +243,7 @@ const Index = () => {
                 className="w-full h-64 object-cover"
               />
               <CardContent className="pt-4">
-                <h3 className="text-xl font-bold mb-2">Спил аварийной ели</h3>
-                <p className="text-muted-foreground text-sm mb-2">
-                  Удаление 25-метровой ели в стесненных условиях двора
-                </p>
-                <div className="text-sm text-primary font-semibold">г. Кемерово, ул. Весенняя</div>
+                <h3 className="text-xl font-bold">Спил аварийной ели</h3>
               </CardContent>
             </Card>
 
@@ -254,11 +254,7 @@ const Index = () => {
                 className="w-full h-64 object-cover"
               />
               <CardContent className="pt-4">
-                <h3 className="text-xl font-bold mb-2">Корчевание пней</h3>
-                <p className="text-muted-foreground text-sm mb-2">
-                  Удаление 5 пней диаметром до 80 см на участке
-                </p>
-                <div className="text-sm text-primary font-semibold">Кемеровский район</div>
+                <h3 className="text-xl font-bold">Корчевание пней</h3>
               </CardContent>
             </Card>
 
@@ -269,11 +265,7 @@ const Index = () => {
                 className="w-full h-64 object-cover"
               />
               <CardContent className="pt-4">
-                <h3 className="text-xl font-bold mb-2">Комплексная очистка</h3>
-                <p className="text-muted-foreground text-sm mb-2">
-                  Спил деревьев и полная уборка придомовой территории
-                </p>
-                <div className="text-sm text-primary font-semibold">г. Кемерово, Заводский район</div>
+                <h3 className="text-xl font-bold">Комплексная очистка</h3>
               </CardContent>
             </Card>
           </div>
@@ -397,8 +389,8 @@ const Index = () => {
                     </div>
                     <div>
                       <h3 className="font-bold mb-1">Email</h3>
-                      <a href="mailto:info@ekospil42.ru" className="text-primary hover:underline">
-                        info@ekospil42.ru
+                      <a href="mailto:Shargin41626@gmail.com" className="text-primary hover:underline">
+                        Shargin41626@gmail.com
                       </a>
                       <p className="text-sm text-muted-foreground">Ответим в течение часа</p>
                     </div>
@@ -462,7 +454,7 @@ const Index = () => {
               <h4 className="font-bold mb-4">Контакты</h4>
               <ul className="space-y-2 text-primary-foreground/80">
                 <li>+7 (913) 416-34-81</li>
-                <li>info@ekospil42.ru</li>
+                <li>Shargin41626@gmail.com</li>
                 <li>г. Кемерово</li>
               </ul>
             </div>
