@@ -25,7 +25,6 @@ const Index = () => {
           
           <nav className="hidden md:flex gap-6 text-sm">
             <a href="#services" className="hover:text-primary transition-colors">Услуги</a>
-            <a href="#price" className="hover:text-primary transition-colors">Цены</a>
             <a href="#contacts" className="hover:text-primary transition-colors">Контакты</a>
           </nav>
           
@@ -49,7 +48,6 @@ const Index = () => {
           <div className="md:hidden bg-white border-t">
             <nav className="container mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
               <a href="#services" className="py-2 hover:text-primary" onClick={() => setMobileMenuOpen(false)}>Услуги</a>
-              <a href="#price" className="py-2 hover:text-primary" onClick={() => setMobileMenuOpen(false)}>Цены</a>
               <a href="#contacts" className="py-2 hover:text-primary" onClick={() => setMobileMenuOpen(false)}>Контакты</a>
               <a href="tel:+79134163481" className="text-primary font-semibold py-2">+7 (913) 416-34-81</a>
             </nav>
@@ -98,8 +96,25 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="services" className="py-8 md:py-12 px-4 bg-white">
-        <div className="container mx-auto max-w-5xl">
+      <section id="services" className="py-8 md:py-12 px-4 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 grid grid-cols-3 gap-4 opacity-5 pointer-events-none">
+          <img 
+            src="https://cdn.poehali.dev/files/ad2ccdc7-65ea-45c2-948d-b7523c10d88c.jpg" 
+            alt=""
+            className="w-full h-full object-cover"
+          />
+          <img 
+            src="https://cdn.poehali.dev/files/f57a6809-830d-49dd-839f-dba42e260786.jpg" 
+            alt=""
+            className="w-full h-full object-cover"
+          />
+          <img 
+            src="https://cdn.poehali.dev/files/d03cb72d-a960-40e5-b137-7769fb789e8a.jpg" 
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container mx-auto max-w-5xl relative z-10">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center">Наши услуги</h2>
           
           <div className="grid md:grid-cols-2 gap-4 md:gap-6">
@@ -196,87 +211,21 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="price" className="py-8 md:py-12 px-4 bg-muted">
-        <div className="container mx-auto max-w-5xl">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Прайс-лист</h2>
-          
-          <div className="grid md:grid-cols-2 gap-4">
-            <Card>
-              <CardContent className="p-4">
-                <h3 className="font-bold mb-3">Спил деревьев</h3>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span>Направленная валка (до 10м)</span>
-                    <span className="font-semibold">от 2000₽</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Валка с оттяжкой (10-20м)</span>
-                    <span className="font-semibold">от 4000₽</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Альпинистский спил (до 20м)</span>
-                    <span className="font-semibold">от 5000₽</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Сложный спил (20-30м)</span>
-                    <span className="font-semibold">от 8000₽</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
 
-            <Card>
-              <CardContent className="p-4">
-                <h3 className="font-bold mb-3">Дополнительные услуги</h3>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span>Корчевание пня (⌀30-50см)</span>
-                    <span className="font-semibold">от 1500₽</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Распил на дрова (за м³)</span>
-                    <span className="font-semibold">от 500₽</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Вывоз веток (за машину)</span>
-                    <span className="font-semibold">от 3000₽</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Срочный выезд (в день звонка)</span>
-                    <span className="font-semibold">+30%</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
 
-          <div className="mt-4 p-4 bg-primary text-primary-foreground rounded-lg text-center">
-            <p className="font-semibold">Скидка 15% при заказе сегодня! Звоните: <a href="tel:+79134163481" className="underline">+7 (913) 416-34-81</a></p>
-          </div>
-
-          <div className="mt-6 grid md:grid-cols-3 gap-4 text-sm">
-            <div className="flex items-start gap-2">
-              <Icon name="Check" size={18} className="text-primary mt-0.5 flex-shrink-0" />
-              <span>Бесплатный выезд и оценка</span>
-            </div>
-            <div className="flex items-start gap-2">
-              <Icon name="Check" size={18} className="text-primary mt-0.5 flex-shrink-0" />
-              <span>Уборка территории включена</span>
-            </div>
-            <div className="flex items-start gap-2">
-              <Icon name="Check" size={18} className="text-primary mt-0.5 flex-shrink-0" />
-              <span>Оплата после выполнения</span>
-            </div>
-          </div>
+      <section className="py-8 md:py-12 px-4 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-3">
+          <img 
+            src="https://cdn.poehali.dev/files/06f9b535-edf8-4b4c-974d-f65595babc25.jpg" 
+            alt=""
+            className="w-full h-full object-cover"
+          />
         </div>
-      </section>
-
-      <section className="py-8 md:py-12 px-4 bg-white">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-5xl relative z-10">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Почему мы</h2>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="text-center p-4">
+            <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-lg">
               <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2">
                 <Icon name="Users" size={24} className="text-primary" />
               </div>
@@ -284,7 +233,7 @@ const Index = () => {
               <div className="text-sm text-muted-foreground">на рынке</div>
             </div>
 
-            <div className="text-center p-4">
+            <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-lg">
               <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2">
                 <Icon name="TreeDeciduous" size={24} className="text-primary" />
               </div>
@@ -292,7 +241,7 @@ const Index = () => {
               <div className="text-sm text-muted-foreground">деревьев спилено</div>
             </div>
 
-            <div className="text-center p-4">
+            <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-lg">
               <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2">
                 <Icon name="Shield" size={24} className="text-primary" />
               </div>
@@ -300,7 +249,7 @@ const Index = () => {
               <div className="text-sm text-muted-foreground">безопасность</div>
             </div>
 
-            <div className="text-center p-4">
+            <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-lg">
               <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2">
                 <Icon name="Clock" size={24} className="text-primary" />
               </div>
