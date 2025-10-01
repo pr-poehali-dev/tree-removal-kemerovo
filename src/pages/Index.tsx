@@ -89,84 +89,116 @@ const Index = () => {
             <h2 className="text-4xl font-bold text-primary mb-4">Наши услуги</h2>
             <p className="text-xl text-muted-foreground">Комплексные решения для любых задач</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
-                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-                  <Icon name="Axe" size={32} className="text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold mb-3">Направленная валка</h3>
-                <p className="text-muted-foreground mb-4">
-                  Безопасное удаление деревьев с заданным направлением падения на открытых участках
-                </p>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" size={16} className="text-primary mt-1 flex-shrink-0" />
-                    <span>Работа на открытой территории</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" size={16} className="text-primary mt-1 flex-shrink-0" />
-                    <span>Точный расчет направления</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" size={16} className="text-primary mt-1 flex-shrink-0" />
-                    <span>Быстрая валка целиком</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div className="space-y-8">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Icon name="Axe" size={32} className="text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3">Направленная валка</h3>
+                      <p className="text-muted-foreground mb-4">
+                        Безопасное удаление деревьев с заданным направлением падения на открытых участках
+                      </p>
+                      <ul className="space-y-2 text-sm">
+                        <li className="flex items-start gap-2">
+                          <Icon name="Check" size={16} className="text-primary mt-1 flex-shrink-0" />
+                          <span>Работа на открытой территории</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Icon name="Check" size={16} className="text-primary mt-1 flex-shrink-0" />
+                          <span>Точный расчет направления</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Icon name="Check" size={16} className="text-primary mt-1 flex-shrink-0" />
+                          <span>Быстрая валка целиком</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
-                <div className="bg-secondary/10 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-                  <Icon name="Layers" size={32} className="text-secondary" />
-                </div>
-                <h3 className="text-2xl font-bold mb-3">Спил частями</h3>
-                <p className="text-muted-foreground mb-4">
-                  Удаление деревьев частями в стесненных условиях с применением альпинизма
-                </p>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" size={16} className="text-secondary mt-1 flex-shrink-0" />
-                    <span>Работа между зданиями</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" size={16} className="text-secondary mt-1 flex-shrink-0" />
-                    <span>Альпинистское снаряжение</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" size={16} className="text-secondary mt-1 flex-shrink-0" />
-                    <span>Высота до 30 метров</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-secondary/10 w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Icon name="Layers" size={32} className="text-secondary" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3">Спил частями</h3>
+                      <p className="text-muted-foreground mb-4">
+                        Удаление деревьев частями в стесненных условиях с применением альпинизма
+                      </p>
+                      <ul className="space-y-2 text-sm">
+                        <li className="flex items-start gap-2">
+                          <Icon name="Check" size={16} className="text-secondary mt-1 flex-shrink-0" />
+                          <span>Работа между зданиями</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Icon name="Check" size={16} className="text-secondary mt-1 flex-shrink-0" />
+                          <span>Альпинистское снаряжение</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Icon name="Check" size={16} className="text-secondary mt-1 flex-shrink-0" />
+                          <span>Высота до 30 метров</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
-                <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-                  <Icon name="Box" size={32} className="text-accent" />
-                </div>
-                <h3 className="text-2xl font-bold mb-3">Распил на дрова</h3>
-                <p className="text-muted-foreground mb-4">
-                  Профессиональный распил древесины на дрова нужного размера
-                </p>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" size={16} className="text-accent mt-1 flex-shrink-0" />
-                    <span>Размер по вашему желанию</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" size={16} className="text-accent mt-1 flex-shrink-0" />
-                    <span>Аккуратная укладка</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" size={16} className="text-accent mt-1 flex-shrink-0" />
-                    <span>Готовые дрова на месте</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Icon name="Box" size={32} className="text-accent" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3">Распил на дрова</h3>
+                      <p className="text-muted-foreground mb-4">
+                        Профессиональный распил древесины на дрова нужного размера
+                      </p>
+                      <ul className="space-y-2 text-sm">
+                        <li className="flex items-start gap-2">
+                          <Icon name="Check" size={16} className="text-accent mt-1 flex-shrink-0" />
+                          <span>Размер по вашему желанию</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Icon name="Check" size={16} className="text-accent mt-1 flex-shrink-0" />
+                          <span>Аккуратная укладка</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Icon name="Check" size={16} className="text-accent mt-1 flex-shrink-0" />
+                          <span>Готовые дрова на месте</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="space-y-4">
+              <img 
+                src="https://cdn.poehali.dev/files/f57a6809-830d-49dd-839f-dba42e260786.jpg" 
+                alt="Профессиональный спил деревьев"
+                className="rounded-2xl shadow-xl w-full h-auto"
+              />
+              <img 
+                src="https://cdn.poehali.dev/files/d03cb72d-a960-40e5-b137-7769fb789e8a.jpg" 
+                alt="Работа с бензопилой"
+                className="rounded-2xl shadow-xl w-full h-auto"
+              />
+              <img 
+                src="https://cdn.poehali.dev/files/06f9b535-edf8-4b4c-974d-f65595babc25.jpg" 
+                alt="Альпинистский спил"
+                className="rounded-2xl shadow-xl w-full h-auto"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -236,38 +268,29 @@ const Index = () => {
             <p className="text-xl text-muted-foreground">Наши реализованные проекты</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="overflow-hidden hover:shadow-xl transition-shadow">
+            <div className="overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
               <img 
                 src="https://cdn.poehali.dev/files/f57a6809-830d-49dd-839f-dba42e260786.jpg" 
                 alt="Спил дерева в городе"
-                className="w-full h-64 object-cover"
+                className="w-full h-80 object-cover"
               />
-              <CardContent className="pt-4">
-                <h3 className="text-xl font-bold">Спил аварийной ели</h3>
-              </CardContent>
-            </Card>
+            </div>
 
-            <Card className="overflow-hidden hover:shadow-xl transition-shadow">
+            <div className="overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
               <img 
                 src="https://cdn.poehali.dev/files/d03cb72d-a960-40e5-b137-7769fb789e8a.jpg" 
                 alt="Корчевание пня"
-                className="w-full h-64 object-cover"
+                className="w-full h-80 object-cover"
               />
-              <CardContent className="pt-4">
-                <h3 className="text-xl font-bold">Корчевание пней</h3>
-              </CardContent>
-            </Card>
+            </div>
 
-            <Card className="overflow-hidden hover:shadow-xl transition-shadow">
+            <div className="overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
               <img 
                 src="https://cdn.poehali.dev/files/06f9b535-edf8-4b4c-974d-f65595babc25.jpg" 
                 alt="Благоустройство территории"
-                className="w-full h-64 object-cover"
+                className="w-full h-80 object-cover"
               />
-              <CardContent className="pt-4">
-                <h3 className="text-xl font-bold">Комплексная очистка</h3>
-              </CardContent>
-            </Card>
+            </div>
           </div>
         </div>
       </section>
