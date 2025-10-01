@@ -80,12 +80,12 @@ const Index = () => {
             </div>
             <div className="flex flex-wrap justify-center gap-6 md:gap-12 pt-6 text-sm md:text-base">
               <div className="flex items-center gap-2">
-                <span className="text-2xl">✅</span>
-                <span className="font-medium">Лицензия</span>
+                <span className="text-2xl">⭐</span>
+                <span className="font-medium">Большой опыт</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-2xl">🛡️</span>
-                <span className="font-medium">Страховка</span>
+                <span className="font-medium">Гарантия работ</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-2xl">⚡</span>
