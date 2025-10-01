@@ -7,9 +7,20 @@ import { useState } from "react";
 
 const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    address: '',
+    description: ''
+  });
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const message = `Новая заявка!%0A%0AИмя: ${formData.name}%0AТелефон: ${formData.phone}%0AАдрес: ${formData.address}%0AОписание: ${formData.description}`;
+    const whatsappUrl = `https://wa.me/79134163481?text=${message}`;
+    
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -260,20 +271,39 @@ const Index = () => {
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium mb-1">Ваше имя</label>
-                    <Input placeholder="Иван Иванов" />
+                    <Input 
+                      placeholder="Иван Иванов" 
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    />
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-1">Телефон</label>
-                    <Input placeholder="+7 (___) ___-__-__" type="tel" required />
+                    <Input 
+                      placeholder="+7 (___) ___-__-__" 
+                      type="tel" 
+                      required 
+                      value={formData.phone}
+                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-1">Адрес объекта</label>
-                  <Input placeholder="г. Кемерово, ул. ..." />
+                  <Input 
+                    placeholder="г. Кемерово, ул. ..." 
+                    value={formData.address}
+                    onChange={(e) => setFormData({...formData, address: e.target.value})}
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-1">Описание задачи</label>
-                  <Textarea placeholder="Количество деревьев, высота, условия..." rows={3} />
+                  <Textarea 
+                    placeholder="Количество деревьев, высота, условия..." 
+                    rows={3}
+                    value={formData.description}
+                    onChange={(e) => setFormData({...formData, description: e.target.value})}
+                  />
                 </div>
                 <Button type="submit" className="w-full bg-gradient-to-r from-primary to-secondary hover:shadow-xl transition-all">
                   Отправить заявку
