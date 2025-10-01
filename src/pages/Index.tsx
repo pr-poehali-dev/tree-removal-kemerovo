@@ -202,12 +202,6 @@ const Index = () => {
               </CardContent>
             </Card>
           </div>
-
-          <div className="mt-6 p-4 bg-secondary/5 rounded-lg border border-secondary/20 text-center">
-            <p className="text-sm font-semibold text-secondary">
-              Полная уборка территории и вывоз веток включены в стоимость
-            </p>
-          </div>
         </div>
       </section>
 
