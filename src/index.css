@@ -4,35 +4,35 @@
 
 @layer base {
   :root {
-    --background: 43 33% 96%;
-    --foreground: 95 60% 15%;
+    --background: 0 0% 100%;
+    --foreground: 210 20% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 95 60% 15%;
+    --card-foreground: 210 20% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 95 60% 15%;
+    --popover-foreground: 210 20% 15%;
 
-    --primary: 95 60% 25%;
-    --primary-foreground: 43 33% 96%;
+    --primary: 210 85% 25%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 25 45% 45%;
-    --secondary-foreground: 43 33% 96%;
+    --secondary: 210 70% 45%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 43 20% 90%;
-    --muted-foreground: 95 20% 40%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 15% 45%;
 
-    --accent: 95 40% 35%;
-    --accent-foreground: 43 33% 96%;
+    --accent: 210 75% 35%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 43 20% 85%;
-    --input: 43 20% 85%;
-    --ring: 95 60% 25%;
+    --border: 210 15% 88%;
+    --input: 210 15% 88%;
+    --ring: 210 85% 25%;
 
-    --radius: 0.5rem;
+    --radius: 0.375rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,7 +100,7 @@
   }
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
 @layer base {
   h1,
@@ -109,10 +109,11 @@
   h4,
   h5,
   h6 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
   }
 
   body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Inter", sans-serif;
   }
 }

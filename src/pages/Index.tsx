@@ -13,9 +13,11 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-border">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <Icon name="TreeDeciduous" size={32} className="text-primary" />
-            <span className="text-2xl font-bold text-primary">ЭкоСпил</span>
+          <div className="flex items-center gap-3">
+            <div className="bg-primary text-primary-foreground w-10 h-10 rounded-lg flex items-center justify-center font-bold text-xl">
+              АР
+            </div>
+            <span className="text-2xl font-bold text-foreground tracking-tight">Арборист PRO</span>
           </div>
           <nav className="hidden md:flex gap-6">
             <a href="#services" className="text-foreground hover:text-primary transition-colors">Услуги</a>
@@ -32,11 +34,11 @@ const Index = () => {
         </div>
       </header>
 
-      <section className="pt-32 pb-20 px-4 bg-gradient-to-b from-background to-muted">
+      <section className="pt-32 pb-20 px-4 bg-white">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
-              <h1 className="text-5xl md:text-6xl font-bold text-primary leading-tight">
+              <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
                 Профессиональный спил аварийных деревьев в Кемерово
               </h1>
               <p className="text-xl text-muted-foreground">
@@ -77,19 +79,19 @@ const Index = () => {
                 alt="Профессиональный арборист за работой"
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
-              <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg flex items-center gap-2">
-                <Icon name="BadgeCheck" size={24} className="text-primary" />
-                <span className="font-semibold text-foreground">Лицензированные специалисты</span>
+              <div className="absolute bottom-6 left-6 bg-primary text-primary-foreground px-6 py-3 rounded-lg shadow-xl flex items-center gap-2">
+                <Icon name="BadgeCheck" size={20} />
+                <span className="font-semibold text-sm uppercase tracking-wide">Лицензированные специалисты</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="services" className="py-20 px-4">
+      <section id="services" className="py-20 px-4 bg-muted">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-primary mb-4">Наши услуги</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-4">Наши услуги</h2>
             <p className="text-xl text-muted-foreground">Комплексные решения для любых задач</p>
           </div>
           <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -206,10 +208,10 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="advantages" className="py-20 px-4 bg-muted">
+      <section id="advantages" className="py-20 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-primary mb-4">Почему выбирают нас</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-4">Почему выбирают нас</h2>
             <p className="text-xl text-muted-foreground">Гарантии качества и безопасности</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -267,7 +269,7 @@ const Index = () => {
       <section id="reviews" className="py-20 px-4 bg-muted">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-primary mb-4">Отзывы клиентов</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-4">Отзывы клиентов</h2>
             <p className="text-xl text-muted-foreground">Что говорят о нашей работе</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -319,10 +321,10 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-20 px-4">
+      <section id="contacts" className="py-20 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-primary mb-4">Свяжитесь с нами</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-4">Свяжитесь с нами</h2>
             <p className="text-xl text-muted-foreground">Оставьте заявку и получите бесплатную консультацию</p>
           </div>
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -425,9 +427,11 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <Icon name="TreeDeciduous" size={32} />
-                <span className="text-2xl font-bold">ЭкоСпил</span>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-primary-foreground text-primary w-10 h-10 rounded-lg flex items-center justify-center font-bold text-xl">
+                  АР
+                </div>
+                <span className="text-2xl font-bold">Арборист PRO</span>
               </div>
               <p className="text-primary-foreground/80">
                 Профессиональные услуги по спилу деревьев в Кемерово и области с 2015 года
@@ -451,7 +455,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-primary-foreground/60 text-sm">
-            © 2025 ЭкоСпил. Все права защищены
+            © 2025 Арборист PRO. Все права защищены
           </div>
         </div>
       </footer>
