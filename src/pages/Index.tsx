@@ -71,7 +71,7 @@ const Index = () => {
                   Позвонить
                 </a>
               </Button>
-              <Button size="lg" className="border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all" asChild>
+              <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white hover:shadow-xl transition-all" asChild>
                 <a href="https://wa.me/79134163481" target="_blank" rel="noopener noreferrer">
                   <Icon name="MessageCircle" size={20} className="mr-2" />
                   WhatsApp
