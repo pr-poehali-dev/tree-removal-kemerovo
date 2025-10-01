@@ -95,22 +95,22 @@ const Index = () => {
                 <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-4">
                   <Icon name="Axe" size={32} className="text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold mb-3">Спил аварийных деревьев</h3>
+                <h3 className="text-2xl font-bold mb-3">Направленная валка</h3>
                 <p className="text-muted-foreground mb-4">
-                  Безопасное удаление опасных деревьев любой сложности с использованием альпинистского снаряжения
+                  Безопасное удаление деревьев с заданным направлением падения на открытых участках
                 </p>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-start gap-2">
                     <Icon name="Check" size={16} className="text-primary mt-1 flex-shrink-0" />
-                    <span>Работа в стесненных условиях</span>
+                    <span>Работа на открытой территории</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" size={16} className="text-primary mt-1 flex-shrink-0" />
-                    <span>Удаление деревьев возле зданий</span>
+                    <span>Точный расчет направления</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" size={16} className="text-primary mt-1 flex-shrink-0" />
-                    <span>Работа на высоте до 30 метров</span>
+                    <span>Быстрая валка целиком</span>
                   </li>
                 </ul>
               </CardContent>
@@ -119,24 +119,24 @@ const Index = () => {
             <Card className="hover:shadow-lg transition-shadow">
               <CardContent className="pt-6">
                 <div className="bg-secondary/10 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-                  <Icon name="Drill" size={32} className="text-secondary" />
+                  <Icon name="Layers" size={32} className="text-secondary" />
                 </div>
-                <h3 className="text-2xl font-bold mb-3">Корчевание пней</h3>
+                <h3 className="text-2xl font-bold mb-3">Спил частями</h3>
                 <p className="text-muted-foreground mb-4">
-                  Полное удаление пней с помощью профессионального оборудования
+                  Удаление деревьев частями в стесненных условиях с применением альпинизма
                 </p>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-start gap-2">
                     <Icon name="Check" size={16} className="text-secondary mt-1 flex-shrink-0" />
-                    <span>Механическое фрезерование</span>
+                    <span>Работа между зданиями</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" size={16} className="text-secondary mt-1 flex-shrink-0" />
-                    <span>Выкорчевывание с корнями</span>
+                    <span>Альпинистское снаряжение</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" size={16} className="text-secondary mt-1 flex-shrink-0" />
-                    <span>Вывоз остатков</span>
+                    <span>Высота до 30 метров</span>
                   </li>
                 </ul>
               </CardContent>
@@ -145,24 +145,24 @@ const Index = () => {
             <Card className="hover:shadow-lg transition-shadow">
               <CardContent className="pt-6">
                 <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-                  <Icon name="Truck" size={32} className="text-accent" />
+                  <Icon name="Box" size={32} className="text-accent" />
                 </div>
-                <h3 className="text-2xl font-bold mb-3">Уборка и вывоз</h3>
+                <h3 className="text-2xl font-bold mb-3">Распил на дрова</h3>
                 <p className="text-muted-foreground mb-4">
-                  Полная очистка территории и утилизация порубочных остатков
+                  Профессиональный распил древесины на дрова нужного размера
                 </p>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-start gap-2">
                     <Icon name="Check" size={16} className="text-accent mt-1 flex-shrink-0" />
-                    <span>Распил на дрова</span>
+                    <span>Размер по вашему желанию</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" size={16} className="text-accent mt-1 flex-shrink-0" />
-                    <span>Измельчение веток</span>
+                    <span>Аккуратная укладка</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" size={16} className="text-accent mt-1 flex-shrink-0" />
-                    <span>Вывоз мусора</span>
+                    <span>Готовые дрова на месте</span>
                   </li>
                 </ul>
               </CardContent>
@@ -444,10 +444,9 @@ const Index = () => {
             <div>
               <h4 className="font-bold mb-4">Услуги</h4>
               <ul className="space-y-2 text-primary-foreground/80">
-                <li>Спил аварийных деревьев</li>
-                <li>Корчевание пней</li>
-                <li>Обрезка кроны</li>
-                <li>Уборка и вывоз</li>
+                <li>Направленная валка</li>
+                <li>Распил на дрова</li>
+                <li>Спил частями в стесненных условиях</li>
               </ul>
             </div>
             <div>
