@@ -24,9 +24,11 @@ const Index = () => {
             <a href="#reviews" className="text-foreground hover:text-primary transition-colors">Отзывы</a>
             <a href="#contacts" className="text-foreground hover:text-primary transition-colors">Контакты</a>
           </nav>
-          <Button className="bg-secondary hover:bg-secondary/90">
-            <Icon name="Phone" size={18} className="mr-2" />
-            Позвонить
+          <Button asChild className="bg-secondary hover:bg-secondary/90">
+            <a href="tel:+79134163481">
+              <Icon name="Phone" size={18} className="mr-2" />
+              Позвонить
+            </a>
           </Button>
         </div>
       </header>
@@ -378,8 +380,8 @@ const Index = () => {
                     </div>
                     <div>
                       <h3 className="font-bold mb-1">Телефон</h3>
-                      <a href="tel:+73842123456" className="text-primary hover:underline">
-                        +7 (3842) 12-34-56
+                      <a href="tel:+79134163481" className="text-primary hover:underline text-lg">
+                        +7 (913) 416-34-81
                       </a>
                       <p className="text-sm text-muted-foreground">Ежедневно с 8:00 до 20:00</p>
                     </div>
@@ -459,7 +461,7 @@ const Index = () => {
             <div>
               <h4 className="font-bold mb-4">Контакты</h4>
               <ul className="space-y-2 text-primary-foreground/80">
-                <li>+7 (3842) 12-34-56</li>
+                <li>+7 (913) 416-34-81</li>
                 <li>info@ekospil42.ru</li>
                 <li>г. Кемерово</li>
               </ul>
