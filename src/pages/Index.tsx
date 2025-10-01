@@ -17,10 +17,10 @@ const Index = () => {
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <div className="bg-primary text-primary-foreground w-8 h-8 rounded flex items-center justify-center font-bold">
-              АР
+            <div className="bg-gradient-to-br from-primary to-secondary text-white w-10 h-10 rounded-xl flex items-center justify-center font-bold text-xl shadow-lg">
+              🌳
             </div>
-            <span className="text-lg md:text-xl font-bold">Арборист PRO</span>
+            <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">ДревоСпас</span>
           </div>
           
           <nav className="hidden md:flex gap-6 text-sm">
@@ -58,20 +58,20 @@ const Index = () => {
       <section className="pt-20 md:pt-24 pb-8 md:pb-12 px-4 bg-gradient-to-b from-primary/5 to-white">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center space-y-4">
-            <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-              Спил деревьев в Кемерово
+            <h1 className="text-3xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+              Спасаем от опасных деревьев! 🪓
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Безопасно удалим любое дерево. 9 лет опыта, своё оборудование, уборка территории
+              Быстро, безопасно, весело справляемся с любым деревом в Кемерово. 9 лет счастливых клиентов!
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
-              <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
+              <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:shadow-xl transition-all" asChild>
                 <a href="tel:+79134163481">
                   <Icon name="Phone" size={20} className="mr-2" />
                   Позвонить
                 </a>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" className="border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all" asChild>
                 <a href="https://wa.me/79134163481" target="_blank" rel="noopener noreferrer">
                   <Icon name="MessageCircle" size={20} className="mr-2" />
                   WhatsApp
@@ -80,16 +80,16 @@ const Index = () => {
             </div>
             <div className="flex flex-wrap justify-center gap-6 md:gap-12 pt-6 text-sm md:text-base">
               <div className="flex items-center gap-2">
-                <Icon name="BadgeCheck" size={20} className="text-primary" />
-                <span>Лицензия</span>
+                <span className="text-2xl">✅</span>
+                <span className="font-medium">Лицензия</span>
               </div>
               <div className="flex items-center gap-2">
-                <Icon name="Shield" size={20} className="text-primary" />
-                <span>Страховка</span>
+                <span className="text-2xl">🛡️</span>
+                <span className="font-medium">Страховка</span>
               </div>
               <div className="flex items-center gap-2">
-                <Icon name="Clock" size={20} className="text-primary" />
-                <span>Выезд за 2 часа</span>
+                <span className="text-2xl">⚡</span>
+                <span className="font-medium">Выезд за 2 часа</span>
               </div>
             </div>
           </div>
@@ -115,17 +115,17 @@ const Index = () => {
           />
         </div>
         <div className="container mx-auto max-w-5xl relative z-10">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center">Наши услуги</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Что мы умеем 🎯</h2>
           
           <div className="grid md:grid-cols-2 gap-4 md:gap-6">
             <Card>
               <CardContent className="p-4 md:p-6">
                 <div className="flex gap-3">
-                  <div className="bg-primary/10 w-10 h-10 rounded flex items-center justify-center flex-shrink-0">
-                    <Icon name="Axe" size={20} className="text-primary" />
+                  <div className="bg-gradient-to-br from-primary/20 to-secondary/20 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 text-2xl">
+                    🪓
                   </div>
                   <div>
-                    <h3 className="font-bold mb-1">Направленная валка</h3>
+                    <h3 className="font-bold mb-1 text-primary">Направленная валка</h3>
                     <p className="text-sm text-muted-foreground mb-2">
                       Быстрое удаление целиком на открытых участках
                     </p>
@@ -142,11 +142,11 @@ const Index = () => {
             <Card>
               <CardContent className="p-4 md:p-6">
                 <div className="flex gap-3">
-                  <div className="bg-secondary/10 w-10 h-10 rounded flex items-center justify-center flex-shrink-0">
-                    <Icon name="Layers" size={20} className="text-secondary" />
+                  <div className="bg-gradient-to-br from-secondary/20 to-accent/20 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 text-2xl">
+                    🧗
                   </div>
                   <div>
-                    <h3 className="font-bold mb-1">Спил частями</h3>
+                    <h3 className="font-bold mb-1 text-secondary">Спил частями</h3>
                     <p className="text-sm text-muted-foreground mb-2">
                       Альпинистский спил в стесненных условиях
                     </p>
@@ -163,11 +163,11 @@ const Index = () => {
             <Card>
               <CardContent className="p-4 md:p-6">
                 <div className="flex gap-3">
-                  <div className="bg-accent/10 w-10 h-10 rounded flex items-center justify-center flex-shrink-0">
-                    <Icon name="Trash2" size={20} className="text-accent" />
+                  <div className="bg-gradient-to-br from-accent/20 to-primary/20 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 text-2xl">
+                    💥
                   </div>
                   <div>
-                    <h3 className="font-bold mb-1">Корчевание пней</h3>
+                    <h3 className="font-bold mb-1 text-accent">Корчевание пней</h3>
                     <p className="text-sm text-muted-foreground mb-2">
                       Полное удаление с корневой системой
                     </p>
@@ -184,11 +184,11 @@ const Index = () => {
             <Card>
               <CardContent className="p-4 md:p-6">
                 <div className="flex gap-3">
-                  <div className="bg-primary/10 w-10 h-10 rounded flex items-center justify-center flex-shrink-0">
-                    <Icon name="Box" size={20} className="text-primary" />
+                  <div className="bg-gradient-to-br from-primary/20 to-accent/20 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 text-2xl">
+                    🔥
                   </div>
                   <div>
-                    <h3 className="font-bold mb-1">Распил на дрова</h3>
+                    <h3 className="font-bold mb-1 text-primary">Распил на дрова</h3>
                     <p className="text-sm text-muted-foreground mb-2">
                       Нарезка древесины под ваши размеры
                     </p>
@@ -216,38 +216,30 @@ const Index = () => {
           />
         </div>
         <div className="container mx-auto max-w-5xl relative z-10">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Почему мы</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">Почему выбирают нас 🌟</h2>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-lg">
-              <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2">
-                <Icon name="Users" size={24} className="text-primary" />
-              </div>
-              <div className="font-bold text-2xl text-primary mb-1">9 лет</div>
+            <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-2">🎂</div>
+              <div className="font-bold text-2xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-1">9 лет</div>
               <div className="text-sm text-muted-foreground">на рынке</div>
             </div>
 
-            <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-lg">
-              <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2">
-                <Icon name="TreeDeciduous" size={24} className="text-primary" />
-              </div>
-              <div className="font-bold text-2xl text-primary mb-1">500+</div>
+            <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-2">🌲</div>
+              <div className="font-bold text-2xl bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent mb-1">500+</div>
               <div className="text-sm text-muted-foreground">деревьев спилено</div>
             </div>
 
-            <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-lg">
-              <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2">
-                <Icon name="Shield" size={24} className="text-primary" />
-              </div>
-              <div className="font-bold text-2xl text-primary mb-1">100%</div>
+            <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-2">🎯</div>
+              <div className="font-bold text-2xl bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent mb-1">100%</div>
               <div className="text-sm text-muted-foreground">безопасность</div>
             </div>
 
-            <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-lg">
-              <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2">
-                <Icon name="Clock" size={24} className="text-primary" />
-              </div>
-              <div className="font-bold text-2xl text-primary mb-1">2 часа</div>
+            <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-2">🚀</div>
+              <div className="font-bold text-2xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1">2 часа</div>
               <div className="text-sm text-muted-foreground">выезд по городу</div>
             </div>
           </div>
@@ -256,7 +248,7 @@ const Index = () => {
 
       <section id="contacts" className="py-8 md:py-12 px-4 bg-muted">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Оставьте заявку</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Давайте познакомимся! 👋</h2>
           
           <Card>
             <CardContent className="p-6">
@@ -279,7 +271,7 @@ const Index = () => {
                   <label className="block text-sm font-medium mb-1">Описание задачи</label>
                   <Textarea placeholder="Количество деревьев, высота, условия..." rows={3} />
                 </div>
-                <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
+                <Button type="submit" className="w-full bg-gradient-to-r from-primary to-secondary hover:shadow-xl transition-all">
                   Отправить заявку
                 </Button>
                 <p className="text-xs text-muted-foreground text-center">
@@ -319,10 +311,10 @@ const Index = () => {
         <div className="container mx-auto max-w-5xl">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
-              <div className="bg-primary-foreground text-primary w-8 h-8 rounded flex items-center justify-center font-bold">
-                АР
+              <div className="bg-gradient-to-br from-primary to-secondary text-white w-8 h-8 rounded-xl flex items-center justify-center text-lg">
+                🌳
               </div>
-              <span className="font-bold">Арборист PRO</span>
+              <span className="font-bold">ДревоСпас</span>
             </div>
             <div className="text-center md:text-left">
               <div>+7 (913) 416-34-81 • Shargin41626@gmail.com</div>
