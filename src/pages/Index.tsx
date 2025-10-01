@@ -328,10 +328,10 @@ const Index = () => {
         href="https://wa.me/79134163481"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all z-50 group"
+        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center shadow-2xl hover:shadow-green-500/50 hover:scale-110 transition-all z-[100] group animate-pulse"
         aria-label="Написать в WhatsApp"
       >
-        <Icon name="MessageCircle" size={28} className="md:w-8 md:h-8" />
+        <Icon name="MessageCircle" size={32} className="md:w-10 md:h-10" />
         <span className="absolute right-full mr-3 bg-gray-900 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
           Написать в WhatsApp
         </span>
