@@ -189,7 +189,7 @@ const Index = () => {
               <CardContent className="p-4 md:p-6">
                 <div className="flex gap-3">
                   <div className="bg-gradient-to-br from-primary/20 to-accent/20 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 text-2xl">
-                    ⛓️
+                    🪚
                   </div>
                   <div>
                     <h3 className="font-bold mb-1 text-primary">Распил на дрова</h3>
