@@ -220,9 +220,9 @@ const Index = () => {
                 <div className="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Icon name="Shield" size={40} className="text-primary" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Полная страховка</h3>
+                <h3 className="text-xl font-bold mb-2">Полная ответственность</h3>
                 <p className="text-muted-foreground text-sm">
-                  Все работы застрахованы на 5 млн рублей
+                  Полная ответственность за ваше имущество
                 </p>
               </CardContent>
             </Card>
