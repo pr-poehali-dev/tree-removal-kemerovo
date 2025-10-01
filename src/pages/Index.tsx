@@ -91,6 +91,10 @@ const Index = () => {
                 <span className="text-2xl">⚡</span>
                 <span className="font-medium">Выезд за 2 часа</span>
               </div>
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">🚨</span>
+                <span className="font-medium">Аварийные 24/7</span>
+              </div>
             </div>
           </div>
         </div>
