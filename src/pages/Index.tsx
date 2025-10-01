@@ -20,7 +20,6 @@ const Index = () => {
           <nav className="hidden md:flex gap-6">
             <a href="#services" className="text-foreground hover:text-primary transition-colors">Услуги</a>
             <a href="#advantages" className="text-foreground hover:text-primary transition-colors">Преимущества</a>
-            <a href="#portfolio" className="text-foreground hover:text-primary transition-colors">Портфолио</a>
             <a href="#reviews" className="text-foreground hover:text-primary transition-colors">Отзывы</a>
             <a href="#contacts" className="text-foreground hover:text-primary transition-colors">Контакты</a>
           </nav>
@@ -257,40 +256,6 @@ const Index = () => {
                 </p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      <section id="portfolio" className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-primary mb-4">Примеры работ</h2>
-            <p className="text-xl text-muted-foreground">Наши реализованные проекты</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
-              <img 
-                src="https://cdn.poehali.dev/files/f57a6809-830d-49dd-839f-dba42e260786.jpg" 
-                alt="Спил дерева в городе"
-                className="w-full h-80 object-cover"
-              />
-            </div>
-
-            <div className="overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
-              <img 
-                src="https://cdn.poehali.dev/files/d03cb72d-a960-40e5-b137-7769fb789e8a.jpg" 
-                alt="Корчевание пня"
-                className="w-full h-80 object-cover"
-              />
-            </div>
-
-            <div className="overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
-              <img 
-                src="https://cdn.poehali.dev/files/06f9b535-edf8-4b4c-974d-f65595babc25.jpg" 
-                alt="Благоустройство территории"
-                className="w-full h-80 object-cover"
-              />
-            </div>
           </div>
         </div>
       </section>
