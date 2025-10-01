@@ -279,7 +279,7 @@ const Index = () => {
                 </p>
               </form>
 
-              <div className="mt-6 pt-6 border-t grid sm:grid-cols-3 gap-4 text-sm">
+              <div className="mt-6 pt-6 border-t grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
                 <div className="flex items-start gap-2">
                   <Icon name="Phone" size={18} className="text-primary flex-shrink-0 mt-0.5" />
                   <div>
@@ -301,6 +301,13 @@ const Index = () => {
                     <div className="text-muted-foreground">Кемерово и область</div>
                   </div>
                 </div>
+                <div className="flex items-start gap-2">
+                  <Icon name="Clock" size={18} className="text-primary flex-shrink-0 mt-0.5" />
+                  <div>
+                    <div className="font-medium">График</div>
+                    <div className="text-muted-foreground">Ежедневно 7:00-22:00</div>
+                  </div>
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -314,11 +321,11 @@ const Index = () => {
               <div className="bg-gradient-to-br from-primary to-secondary text-white w-8 h-8 rounded-xl flex items-center justify-center text-lg">
                 🌳
               </div>
-              <span className="font-bold">ДревоСпас</span>
+              <span className="font-bold">Спил Деревьев Кемерово</span>
             </div>
             <div className="text-center md:text-left">
               <div>+7 (913) 416-34-81 • Shargin41626@gmail.com</div>
-              <div className="text-primary-foreground/70 text-xs">Кемерово и область • Работаем с 2015 года</div>
+              <div className="text-primary-foreground/70 text-xs">Кемерово и область • Ежедневно 7:00-22:00</div>
             </div>
           </div>
         </div>
