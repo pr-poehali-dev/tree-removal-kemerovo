@@ -238,7 +238,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="overflow-hidden hover:shadow-xl transition-shadow">
               <img 
-                src="/img/7d610336-a591-41aa-b424-e9cfad0d87e7.jpg" 
+                src="https://cdn.poehali.dev/files/f57a6809-830d-49dd-839f-dba42e260786.jpg" 
                 alt="Спил дерева в городе"
                 className="w-full h-64 object-cover"
               />
@@ -249,7 +249,7 @@ const Index = () => {
 
             <Card className="overflow-hidden hover:shadow-xl transition-shadow">
               <img 
-                src="/img/7cf741e7-3fa9-42c8-b956-c2bdd646b529.jpg" 
+                src="https://cdn.poehali.dev/files/d03cb72d-a960-40e5-b137-7769fb789e8a.jpg" 
                 alt="Корчевание пня"
                 className="w-full h-64 object-cover"
               />
@@ -260,7 +260,7 @@ const Index = () => {
 
             <Card className="overflow-hidden hover:shadow-xl transition-shadow">
               <img 
-                src="/img/2221a58e-ee42-4911-8be4-d810b7f62ed1.jpg" 
+                src="https://cdn.poehali.dev/files/06f9b535-edf8-4b4c-974d-f65595babc25.jpg" 
                 alt="Благоустройство территории"
                 className="w-full h-64 object-cover"
               />
