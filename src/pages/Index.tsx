@@ -20,7 +20,7 @@ const Index = () => {
             <div className="bg-gradient-to-br from-primary to-secondary text-white w-10 h-10 rounded-xl flex items-center justify-center font-bold text-xl shadow-lg">
               🌳
             </div>
-            <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">ДревоСпас</span>
+            <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Спил Деревьев Кемерово</span>
           </div>
           
           <nav className="hidden md:flex gap-6 text-sm">
