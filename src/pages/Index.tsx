@@ -77,6 +77,10 @@ const Index = () => {
                 alt="Профессиональный арборист за работой"
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
+              <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg flex items-center gap-2">
+                <Icon name="BadgeCheck" size={24} className="text-primary" />
+                <span className="font-semibold text-foreground">Лицензированные специалисты</span>
+              </div>
             </div>
           </div>
         </div>
