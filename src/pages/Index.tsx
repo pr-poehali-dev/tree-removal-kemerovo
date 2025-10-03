@@ -31,10 +31,7 @@ const Index = () => {
             <div className="bg-primary text-white w-11 h-11 rounded-2xl flex items-center justify-center font-bold shadow-lg">
               <Icon name="TreePine" size={24} />
             </div>
-            <div className="flex flex-col">
-              <span className="text-lg font-bold text-gray-900">СпилКемерово</span>
-              <span className="text-xs text-gray-500 hidden sm:block">С 2016 года</span>
-            </div>
+            <span className="text-lg font-bold text-gray-900">СпилКемерово</span>
           </div>
           
           <nav className="hidden lg:flex gap-8 text-sm font-medium">
