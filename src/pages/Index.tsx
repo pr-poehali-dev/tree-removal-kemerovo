@@ -178,8 +178,8 @@ const Index = () => {
             <Card>
               <CardContent className="p-4 md:p-6">
                 <div className="flex gap-3">
-                  <div className="bg-gradient-to-br from-accent/20 to-primary/20 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 text-2xl">
-                    🪵
+                  <div className="bg-gradient-to-br from-accent/20 to-primary/20 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Icon name="TreeDeciduous" size={24} className="text-accent" />
                   </div>
                   <div>
                     <h3 className="font-bold mb-1 text-accent">Корчевание пней</h3>
@@ -199,8 +199,8 @@ const Index = () => {
             <Card>
               <CardContent className="p-4 md:p-6">
                 <div className="flex gap-3">
-                  <div className="bg-gradient-to-br from-primary/20 to-accent/20 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 text-2xl">
-                    🪚
+                  <div className="bg-gradient-to-br from-primary/20 to-accent/20 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Icon name="Axe" size={24} className="text-primary" />
                   </div>
                   <div>
                     <h3 className="font-bold mb-1 text-primary">Распил на дрова</h3>
