@@ -24,30 +24,35 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <div className="bg-gradient-to-br from-primary to-secondary text-white w-10 h-10 rounded-xl flex items-center justify-center font-bold text-xl shadow-lg">
-              🌳
+    <div className="min-h-screen bg-white">
+      <header className="sticky top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center max-w-7xl">
+          <div className="flex items-center gap-3">
+            <div className="bg-primary text-white w-11 h-11 rounded-2xl flex items-center justify-center font-bold shadow-lg">
+              <Icon name="TreePine" size={24} />
             </div>
-            <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Спил Деревьев Кемерово</span>
+            <div className="flex flex-col">
+              <span className="text-lg font-bold text-gray-900">СпилКемерово</span>
+              <span className="text-xs text-gray-500 hidden sm:block">С 2016 года</span>
+            </div>
           </div>
           
-          <nav className="hidden md:flex gap-6 text-sm">
-            <a href="#services" className="hover:text-primary transition-colors">Услуги</a>
-            <a href="#contacts" className="hover:text-primary transition-colors">Контакты</a>
+          <nav className="hidden lg:flex gap-8 text-sm font-medium">
+            <a href="#services" className="text-gray-700 hover:text-primary transition-colors">Услуги</a>
+            <a href="#why" className="text-gray-700 hover:text-primary transition-colors">Преимущества</a>
+            <a href="#contacts" className="text-gray-700 hover:text-primary transition-colors">Контакты</a>
           </nav>
           
-          <div className="flex items-center gap-2">
-            <a href="tel:+79134163481" className="hidden sm:flex text-primary font-semibold text-sm md:text-base hover:underline">
+          <div className="flex items-center gap-3">
+            <a href="tel:+79134163481" className="hidden md:flex items-center gap-2 text-gray-900 font-semibold hover:text-primary transition-colors">
+              <Icon name="Phone" size={18} />
               +7 (913) 416-34-81
             </a>
             
             <Button 
               variant="ghost" 
               size="sm"
-              className="md:hidden"
+              className="lg:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <Icon name={mobileMenuOpen ? "X" : "Menu"} size={24} />
@@ -56,161 +61,214 @@ const Index = () => {
         </div>
         
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t">
-            <nav className="container mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
-              <a href="#services" className="py-2 hover:text-primary" onClick={() => setMobileMenuOpen(false)}>Услуги</a>
-              <a href="#contacts" className="py-2 hover:text-primary" onClick={() => setMobileMenuOpen(false)}>Контакты</a>
-              <a href="tel:+79134163481" className="text-primary font-semibold py-2">+7 (913) 416-34-81</a>
+          <div className="lg:hidden bg-white border-t border-gray-100 shadow-lg">
+            <nav className="container mx-auto px-4 py-4 flex flex-col gap-3">
+              <a href="#services" className="py-2 text-gray-700 font-medium hover:text-primary" onClick={() => setMobileMenuOpen(false)}>Услуги</a>
+              <a href="#why" className="py-2 text-gray-700 font-medium hover:text-primary" onClick={() => setMobileMenuOpen(false)}>Преимущества</a>
+              <a href="#contacts" className="py-2 text-gray-700 font-medium hover:text-primary" onClick={() => setMobileMenuOpen(false)}>Контакты</a>
+              <a href="tel:+79134163481" className="text-primary font-semibold py-2 flex items-center gap-2">
+                <Icon name="Phone" size={18} />
+                +7 (913) 416-34-81
+              </a>
             </nav>
           </div>
         )}
       </header>
 
-      <section className="pt-20 md:pt-24 pb-8 md:pb-12 px-4 bg-gradient-to-b from-primary/5 to-white">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center space-y-4">
-            <h1 className="text-3xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-              Спасаем от опасных деревьев! 🪓
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Быстро, безопасно, весело справляемся с любым деревом в Кемерово. 9 лет счастливых клиентов!
+      <section className="pt-16 pb-20 px-4 bg-gradient-to-br from-gray-50 via-white to-primary/5">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
+                <Icon name="Zap" size={16} />
+                Выезд за 2 часа
+              </div>
+              
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] text-gray-900">
+                Спил деревьев<br />
+                <span className="text-primary">по Кемерово</span>
+              </h1>
+              
+              <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
+                Профессиональное удаление деревьев любой сложности. 9 лет опыта, современное оборудование, безопасная работа.
+              </p>
+              
+              <div className="flex flex-wrap gap-4">
+                <Button size="lg" className="h-14 px-8 text-base font-semibold shadow-lg hover:shadow-xl transition-all" asChild>
+                  <a href="#contacts">
+                    Получить консультацию
+                    <Icon name="ArrowRight" size={20} className="ml-2" />
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" className="h-14 px-8 text-base font-semibold border-2" asChild>
+                  <a href="tel:+79134163481">
+                    <Icon name="Phone" size={20} className="mr-2" />
+                    Позвонить
+                  </a>
+                </Button>
+              </div>
+              
+              <div className="flex flex-wrap gap-6 pt-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Icon name="Shield" size={24} className="text-primary" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-gray-900">Гарантия</div>
+                    <div className="text-sm text-gray-500">На все работы</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Icon name="Clock" size={24} className="text-primary" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-gray-900">24/7</div>
+                    <div className="text-sm text-gray-500">Аварийный выезд</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="absolute -top-6 -left-6 w-72 h-72 bg-primary/20 rounded-full blur-3xl"></div>
+              <div className="absolute -bottom-6 -right-6 w-72 h-72 bg-secondary/20 rounded-full blur-3xl"></div>
+              <img 
+                src="https://cdn.poehali.dev/files/ad2ccdc7-65ea-45c2-948d-b7523c10d88c.jpg"
+                alt="Спил деревьев"
+                className="relative rounded-3xl shadow-2xl w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl md:text-5xl font-black mb-6 text-gray-900">
+              Наши услуги
+            </h2>
+            <p className="text-xl text-gray-600">
+              Профессиональное удаление деревьев любой сложности с применением современных технологий
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
-              <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:shadow-xl transition-all" asChild>
-                <a href="tel:+79134163481">
-                  <Icon name="Phone" size={20} className="mr-2" />
-                  Позвонить
-                </a>
-              </Button>
-              <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white hover:shadow-xl transition-all" asChild>
-                <a href="https://wa.me/79134163481" target="_blank" rel="noopener noreferrer">
-                  <Icon name="MessageCircle" size={20} className="mr-2" />
-                  WhatsApp
-                </a>
-              </Button>
-            </div>
-            <div className="flex flex-wrap justify-center gap-6 md:gap-12 pt-6 text-sm md:text-base">
-              <div className="flex items-center gap-2">
-                <span className="text-2xl">⭐</span>
-                <span className="font-medium">Большой опыт</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-2xl">🛡️</span>
-                <span className="font-medium">Гарантия работ</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-2xl">⚡</span>
-                <span className="font-medium">Выезд за 2 часа</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-2xl">🚨</span>
-                <span className="font-medium">Аварийные 24/7</span>
-              </div>
-            </div>
           </div>
-        </div>
-      </section>
-
-      <section id="services" className="py-8 md:py-12 px-4 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 grid grid-cols-3 gap-4 opacity-5 pointer-events-none">
-          <img 
-            src="https://cdn.poehali.dev/files/ad2ccdc7-65ea-45c2-948d-b7523c10d88c.jpg" 
-            alt=""
-            className="w-full h-full object-cover"
-          />
-          <img 
-            src="https://cdn.poehali.dev/files/f57a6809-830d-49dd-839f-dba42e260786.jpg" 
-            alt=""
-            className="w-full h-full object-cover"
-          />
-          <img 
-            src="https://cdn.poehali.dev/files/d03cb72d-a960-40e5-b137-7769fb789e8a.jpg" 
-            alt=""
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="container mx-auto max-w-5xl relative z-10">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Что мы умеем 🎯</h2>
           
-          <div className="grid md:grid-cols-2 gap-4 md:gap-6">
-            <Card>
-              <CardContent className="p-4 md:p-6">
-                <div className="flex gap-3">
-                  <div className="bg-gradient-to-br from-primary/20 to-secondary/20 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 text-2xl">
-                    🪓
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="border-2 hover:border-primary transition-all hover:shadow-xl group">
+              <CardContent className="p-8">
+                <div className="flex items-start gap-6">
+                  <div className="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-all">
+                    <Icon name="Axe" size={32} />
                   </div>
-                  <div>
-                    <h3 className="font-bold mb-1 text-primary">Направленная валка</h3>
-                    <p className="text-sm text-muted-foreground mb-2">
-                      Быстрое удаление целиком на открытых участках
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-3 text-gray-900">Направленная валка</h3>
+                    <p className="text-gray-600 mb-4">
+                      Быстрое удаление целиком на открытых участках с точным расчетом направления падения
                     </p>
-                    <ul className="text-xs text-muted-foreground space-y-1">
-                      <li>• Точный расчет направления падения</li>
-                      <li>• Работа на открытой территории</li>
-                      <li>• От 2000₽ за дерево</li>
+                    <ul className="space-y-2 text-sm text-gray-600">
+                      <li className="flex items-center gap-2">
+                        <Icon name="Check" size={18} className="text-primary" />
+                        Точный расчет направления
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Icon name="Check" size={18} className="text-primary" />
+                        Работа на открытой территории
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Icon name="Check" size={18} className="text-primary" />
+                        От 2000₽ за дерево
+                      </li>
                     </ul>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card>
-              <CardContent className="p-4 md:p-6">
-                <div className="flex gap-3">
-                  <div className="bg-gradient-to-br from-secondary/20 to-accent/20 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 text-2xl">
-                    🧗
+            <Card className="border-2 hover:border-primary transition-all hover:shadow-xl group">
+              <CardContent className="p-8">
+                <div className="flex items-start gap-6">
+                  <div className="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-all">
+                    <Icon name="Mountain" size={32} />
                   </div>
-                  <div>
-                    <h3 className="font-bold mb-1 text-secondary">Спил частями</h3>
-                    <p className="text-sm text-muted-foreground mb-2">
-                      Альпинистский спил в стесненных условиях
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-3 text-gray-900">Спил частями</h3>
+                    <p className="text-gray-600 mb-4">
+                      Альпинистский спил в стесненных условиях между зданиями и ЛЭП
                     </p>
-                    <ul className="text-xs text-muted-foreground space-y-1">
-                      <li>• Между зданиями и ЛЭП</li>
-                      <li>• Высота до 30 метров</li>
-                      <li>• От 5000₽ за дерево</li>
+                    <ul className="space-y-2 text-sm text-gray-600">
+                      <li className="flex items-center gap-2">
+                        <Icon name="Check" size={18} className="text-primary" />
+                        Между зданиями и ЛЭП
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Icon name="Check" size={18} className="text-primary" />
+                        Высота до 30 метров
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Icon name="Check" size={18} className="text-primary" />
+                        От 5000₽ за дерево
+                      </li>
                     </ul>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card>
-              <CardContent className="p-4 md:p-6">
-                <div className="flex gap-3">
-                  <div className="bg-gradient-to-br from-accent/20 to-primary/20 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Icon name="TreeDeciduous" size={24} className="text-accent" />
+            <Card className="border-2 hover:border-primary transition-all hover:shadow-xl group">
+              <CardContent className="p-8">
+                <div className="flex items-start gap-6">
+                  <div className="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-all">
+                    <Icon name="TreeDeciduous" size={32} />
                   </div>
-                  <div>
-                    <h3 className="font-bold mb-1 text-accent">Корчевание пней</h3>
-                    <p className="text-sm text-muted-foreground mb-2">
-                      Полное удаление с корневой системой
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-3 text-gray-900">Корчевание пней</h3>
+                    <p className="text-gray-600 mb-4">
+                      Полное удаление пня с корневой системой методом фрезерования
                     </p>
-                    <ul className="text-xs text-muted-foreground space-y-1">
-                      <li>• Фрезерование пня</li>
-                      <li>• Вывоз опилок</li>
-                      <li>• От 1500₽ за пень</li>
+                    <ul className="space-y-2 text-sm text-gray-600">
+                      <li className="flex items-center gap-2">
+                        <Icon name="Check" size={18} className="text-primary" />
+                        Фрезерование пня
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Icon name="Check" size={18} className="text-primary" />
+                        Вывоз опилок
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Icon name="Check" size={18} className="text-primary" />
+                        От 1500₽ за пень
+                      </li>
                     </ul>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card>
-              <CardContent className="p-4 md:p-6">
-                <div className="flex gap-3">
-                  <div className="bg-gradient-to-br from-primary/20 to-accent/20 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Icon name="Axe" size={24} className="text-primary" />
+            <Card className="border-2 hover:border-primary transition-all hover:shadow-xl group">
+              <CardContent className="p-8">
+                <div className="flex items-start gap-6">
+                  <div className="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-all">
+                    <Icon name="Logs" size={32} />
                   </div>
-                  <div>
-                    <h3 className="font-bold mb-1 text-primary">Распил на дрова</h3>
-                    <p className="text-sm text-muted-foreground mb-2">
-                      Нарезка древесины под ваши размеры
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-3 text-gray-900">Распил на дрова</h3>
+                    <p className="text-gray-600 mb-4">
+                      Нарезка древесины под любые размеры с аккуратной укладкой
                     </p>
-                    <ul className="text-xs text-muted-foreground space-y-1">
-                      <li>• Любой размер чурок</li>
-                      <li>• Аккуратная укладка</li>
-                      <li>• От 500₽ за м³</li>
+                    <ul className="space-y-2 text-sm text-gray-600">
+                      <li className="flex items-center gap-2">
+                        <Icon name="Check" size={18} className="text-primary" />
+                        Любой размер чурок
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Icon name="Check" size={18} className="text-primary" />
+                        Аккуратная укладка
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Icon name="Check" size={18} className="text-primary" />
+                        От 500₽ за м³
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -220,126 +278,145 @@ const Index = () => {
         </div>
       </section>
 
-
-
-      <section className="py-8 md:py-12 px-4 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-3">
-          <img 
-            src="https://cdn.poehali.dev/files/06f9b535-edf8-4b4c-974d-f65595babc25.jpg" 
-            alt=""
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="container mx-auto max-w-5xl relative z-10">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">Почему выбирают нас 🌟</h2>
+      <section id="why" className="py-20 px-4 bg-gradient-to-br from-primary/5 to-white">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl md:text-5xl font-black mb-6 text-gray-900">
+              Почему выбирают нас
+            </h2>
+          </div>
           
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-2">🎂</div>
-              <div className="font-bold text-2xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-1">9 лет</div>
-              <div className="text-sm text-muted-foreground">на рынке</div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Icon name="Calendar" size={32} className="text-primary" />
+              </div>
+              <div className="text-5xl font-black text-gray-900 mb-2">9</div>
+              <div className="text-gray-600 font-medium">лет на рынке</div>
             </div>
 
-            <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-2">🌲</div>
-              <div className="font-bold text-2xl bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent mb-1">500+</div>
-              <div className="text-sm text-muted-foreground">деревьев спилено</div>
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Icon name="TreePine" size={32} className="text-primary" />
+              </div>
+              <div className="text-5xl font-black text-gray-900 mb-2">500+</div>
+              <div className="text-gray-600 font-medium">деревьев спилено</div>
             </div>
 
-            <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-2">🎯</div>
-              <div className="font-bold text-2xl bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent mb-1">100%</div>
-              <div className="text-sm text-muted-foreground">безопасность</div>
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Icon name="ShieldCheck" size={32} className="text-primary" />
+              </div>
+              <div className="text-5xl font-black text-gray-900 mb-2">100%</div>
+              <div className="text-gray-600 font-medium">безопасность</div>
             </div>
 
-            <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-2">🚀</div>
-              <div className="font-bold text-2xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1">2 часа</div>
-              <div className="text-sm text-muted-foreground">выезд по городу</div>
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Icon name="Zap" size={32} className="text-primary" />
+              </div>
+              <div className="text-5xl font-black text-gray-900 mb-2">2ч</div>
+              <div className="text-gray-600 font-medium">выезд по городу</div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="contacts" className="py-8 md:py-12 px-4 bg-muted">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Давайте познакомимся! 👋</h2>
+      <section id="contacts" className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-4xl md:text-5xl font-black mb-6 text-gray-900">
+              Оставьте заявку
+            </h2>
+            <p className="text-xl text-gray-600">
+              Перезвоним в течение 15 минут и ответим на все вопросы
+            </p>
+          </div>
           
-          <Card>
-            <CardContent className="p-6">
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid sm:grid-cols-2 gap-4">
+          <Card className="border-2 shadow-2xl">
+            <CardContent className="p-8 md:p-12">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium mb-1">Ваше имя</label>
+                    <label className="block text-sm font-semibold mb-2 text-gray-900">Ваше имя</label>
                     <Input 
                       placeholder="Иван Иванов" 
                       value={formData.name}
                       onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      className="h-12"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-1">Телефон</label>
+                    <label className="block text-sm font-semibold mb-2 text-gray-900">Телефон</label>
                     <Input 
                       placeholder="+7 (___) ___-__-__" 
                       type="tel" 
                       required 
                       value={formData.phone}
                       onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                      className="h-12"
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-1">Адрес объекта</label>
+                  <label className="block text-sm font-semibold mb-2 text-gray-900">Адрес объекта</label>
                   <Input 
                     placeholder="г. Кемерово, ул. ..." 
                     value={formData.address}
                     onChange={(e) => setFormData({...formData, address: e.target.value})}
+                    className="h-12"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-1">Описание задачи</label>
+                  <label className="block text-sm font-semibold mb-2 text-gray-900">Описание задачи</label>
                   <Textarea 
                     placeholder="Количество деревьев, высота, условия..." 
-                    rows={3}
+                    rows={4}
                     value={formData.description}
                     onChange={(e) => setFormData({...formData, description: e.target.value})}
                   />
                 </div>
-                <Button type="submit" className="w-full bg-gradient-to-r from-primary to-secondary hover:shadow-xl transition-all">
+                <Button type="submit" size="lg" className="w-full h-14 text-base font-semibold shadow-lg hover:shadow-xl transition-all">
                   Отправить заявку
+                  <Icon name="Send" size={20} className="ml-2" />
                 </Button>
-                <p className="text-xs text-muted-foreground text-center">
-                  Перезвоним в течение 15 минут
-                </p>
               </form>
 
-              <div className="mt-6 pt-6 border-t grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
-                <div className="flex items-start gap-2">
-                  <Icon name="Phone" size={18} className="text-primary flex-shrink-0 mt-0.5" />
+              <div className="mt-10 pt-10 border-t grid md:grid-cols-2 gap-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <Icon name="Phone" size={24} className="text-primary" />
+                  </div>
                   <div>
-                    <div className="font-medium">Телефон</div>
-                    <a href="tel:+79134163481" className="text-primary hover:underline">+7 (913) 416-34-81</a>
+                    <div className="font-bold text-gray-900 mb-1">Телефон</div>
+                    <a href="tel:+79134163481" className="text-primary hover:underline font-medium">+7 (913) 416-34-81</a>
                   </div>
                 </div>
-                <div className="flex items-start gap-2">
-                  <Icon name="Mail" size={18} className="text-primary flex-shrink-0 mt-0.5" />
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <Icon name="Mail" size={24} className="text-primary" />
+                  </div>
                   <div>
-                    <div className="font-medium">Email</div>
-                    <a href="mailto:Shargin41626@gmail.com" className="text-primary hover:underline text-xs break-all">Shargin41626@gmail.com</a>
+                    <div className="font-bold text-gray-900 mb-1">Email</div>
+                    <a href="mailto:Shargin41626@gmail.com" className="text-primary hover:underline font-medium break-all">Shargin41626@gmail.com</a>
                   </div>
                 </div>
-                <div className="flex items-start gap-2">
-                  <Icon name="MapPin" size={18} className="text-primary flex-shrink-0 mt-0.5" />
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <Icon name="MapPin" size={24} className="text-primary" />
+                  </div>
                   <div>
-                    <div className="font-medium">Работаем</div>
-                    <div className="text-muted-foreground">Кемерово и область</div>
+                    <div className="font-bold text-gray-900 mb-1">Работаем</div>
+                    <div className="text-gray-600">Кемерово и область</div>
                   </div>
                 </div>
-                <div className="flex items-start gap-2">
-                  <Icon name="Clock" size={18} className="text-primary flex-shrink-0 mt-0.5" />
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <Icon name="Clock" size={24} className="text-primary" />
+                  </div>
                   <div>
-                    <div className="font-medium">График</div>
-                    <div className="text-muted-foreground">Ежедневно 7:00-22:00</div>
+                    <div className="font-bold text-gray-900 mb-1">График</div>
+                    <div className="text-gray-600">Ежедневно 7:00-22:00</div>
                   </div>
                 </div>
               </div>
@@ -348,18 +425,22 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="bg-primary text-primary-foreground py-6 px-4 text-sm">
-        <div className="container mx-auto max-w-5xl">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-2">
-              <div className="bg-gradient-to-br from-primary to-secondary text-white w-8 h-8 rounded-xl flex items-center justify-center text-lg">
-                🌳
+      <footer className="bg-gray-900 text-white py-12 px-4">
+        <div className="container mx-auto max-w-7xl">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex items-center gap-3">
+              <div className="bg-primary text-white w-12 h-12 rounded-2xl flex items-center justify-center">
+                <Icon name="TreePine" size={24} />
               </div>
-              <span className="font-bold">Спил Деревьев Кемерово</span>
+              <div>
+                <div className="font-bold text-lg">СпилКемерово</div>
+                <div className="text-sm text-gray-400">С 2016 года</div>
+              </div>
             </div>
-            <div className="text-center md:text-left">
-              <div>+7 (913) 416-34-81 • Shargin41626@gmail.com</div>
-              <div className="text-primary-foreground/70 text-xs">Кемерово и область • Ежедневно 7:00-22:00</div>
+            <div className="text-center md:text-right">
+              <div className="font-semibold mb-1">+7 (913) 416-34-81</div>
+              <div className="text-sm text-gray-400">Shargin41626@gmail.com</div>
+              <div className="text-sm text-gray-400 mt-1">Кемерово и область • Ежедневно 7:00-22:00</div>
             </div>
           </div>
         </div>
@@ -369,13 +450,10 @@ const Index = () => {
         href="https://wa.me/79134163481"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center shadow-2xl hover:shadow-green-500/50 hover:scale-110 transition-all z-[100] group animate-pulse"
+        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all z-50"
         aria-label="Написать в WhatsApp"
       >
-        <Icon name="MessageCircle" size={32} className="md:w-10 md:h-10" />
-        <span className="absolute right-full mr-3 bg-gray-900 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-          Написать в WhatsApp
-        </span>
+        <Icon name="MessageCircle" size={28} />
       </a>
     </div>
   );
