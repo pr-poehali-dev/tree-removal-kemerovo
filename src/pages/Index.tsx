@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Icon from "@/components/ui/icon";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,6 +13,10 @@ const Index = () => {
     address: '',
     description: ''
   });
+
+  useEffect(() => {
+    document.title = "Спил деревьев Кемерово - Профессионально ⭐ Быстро ⭐ Безопасно | +7 (913) 416-34-81";
+  }, []);
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -82,12 +86,12 @@ const Index = () => {
               </div>
               
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] text-gray-900">
-                Спил деревьев<br />
-                <span className="text-primary">по Кемерово</span>
+                Спил и удаление деревьев<br />
+                <span className="text-primary">в Кемерово</span>
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
-                Профессиональное удаление деревьев любой сложности. 9 лет опыта, современное оборудование, безопасная работа.
+                Профессиональный спил деревьев любой сложности в Кемерово и области. Направленная валка, альпинистский спил частями, корчевание пней. Работаем с 2016 года.
               </p>
               
               <div className="flex flex-wrap gap-4">
